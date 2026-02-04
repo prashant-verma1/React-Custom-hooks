@@ -5,7 +5,8 @@ import ProductCard from "./components/ProductCart.jsx";
 import Cart from "./components/Cart.jsx";
 
 function App() {
-  const { cart, removecart, addToCart, updateQuantity, total } = useCart();
+  const { cart, setCart, removecart, addToCart, updateQuantity, total } =
+    useCart();
   return (
     <>
       <div className="app">
@@ -24,6 +25,7 @@ function App() {
           </section>
           <Cart
             cart={cart}
+            setCart={setCart}
             onUpdateQuantity={updateQuantity}
             onRemove={removecart}
             total={total}

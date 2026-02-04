@@ -1,6 +1,6 @@
 import CartItem from "./CartItem.jsx";
 
-function Cart({ cart,setCart, onUpdateQuantity, onRemove, total }) {
+function Cart({ cart, setCart, onUpdateQuantity, onRemove, total }) {
   if (cart.length === 0) {
     return <div className="cart-empty">Your Cart is Empty</div>;
   }
@@ -21,7 +21,9 @@ function Cart({ cart,setCart, onUpdateQuantity, onRemove, total }) {
       ))}
       <div className="cart-total">
         <h3>Total: ${typeof total === "string" ? total : total.toFixed(2)}</h3>
-        <button className="checkout-btn" onClick={()=>handleCheckout()}>Checkout</button>
+        <button className="checkout-btn" onClick={() => handleCheckout()}>
+          Checkout
+        </button>
       </div>
     </div>
   );
