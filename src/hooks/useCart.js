@@ -1,4 +1,3 @@
-import { set } from 'mongoose';
 import { useEffect, useMemo, useState } from 'react'
 
 export function useCart() {
